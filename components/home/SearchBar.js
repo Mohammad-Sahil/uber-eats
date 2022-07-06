@@ -12,7 +12,7 @@ export default function SearchBar(props) {
         query={{ key: "AIzaSyAkPLBgQX8DrcbsCUxv628N-okrimr_Qbk"}}
         onPress={(data, details = null) => {
             const city  = data.description.split(',')[0];
-            props.cityHandler(city)
+            props.cityHandler(city) 
         }}
         styles={{
           textInput: {

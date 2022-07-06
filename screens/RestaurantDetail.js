@@ -3,6 +3,7 @@ import React from 'react'
 import About from '../components/restaurantDetail/About';
 import { Divider } from 'react-native-elements';
 import MenuItems from '../components/restaurantDetail/MenuItems';
+// import ViewCart from '../components/restaurantDetail/ViewCart';
 
 const foods = [
     {
@@ -44,12 +45,13 @@ const foods = [
     },
   ];
 
-export default function RestaurantDetail() {
+export default function RestaurantDetail({ route }) {
   return (
     <View>
-      <About foods={foods[0]}/>
+      <About route={route}/>
       <Divider width={1.8} style={{ marginVertical: 20 }}/>
       <MenuItems foods={foods} />
+      {/* <ViewCart/> */}
     </View>
   )
 }

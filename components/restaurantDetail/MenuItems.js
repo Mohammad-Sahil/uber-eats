@@ -46,9 +46,9 @@ export default function MenuItems({
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       {foods.map((food, index) => (
-        <View key={index}>
+        <View key={index}> 
           <View style={styles.menuItemStyle}>
-            {!hideCheckbox ? (
+            {hideCheckbox ? (
               <></>
             ) : (
               <BouncyCheckbox

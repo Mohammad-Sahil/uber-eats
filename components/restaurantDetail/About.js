@@ -1,17 +1,16 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
 
-export default function About({foods}) {
-    const yelpRestaurantInfo = {
-        name: "Chilaquiles",
-        image: "https://www.modernhoney.com/wp-content/uploads/2019/08/Classic-Lasagna-14-scaled.jpg",
-        price:  "$4",
-        reviews: "1500",
-        rating: 4.5,
-        categories: [{title: "Thai"}, {title: "Comfort Food"},{title: "Comfort Food"},{title: "Comfort Food"}]
-    }
-  const { name, image, price, reviews, rating, categories } = yelpRestaurantInfo;
-//     props.route.params;
+export default function About(props) {
+    // const yelpRestaurantInfo = {
+    //     name: "Chilaquiles",
+    //     image: "https://www.modernhoney.com/wp-content/uploads/2019/08/Classic-Lasagna-14-scaled.jpg",
+    //     price:  "$4",
+    //     reviews: "1500",
+    //     rating: 4.5,
+    //     categories: [{title: "Thai"}, {title: "Comfort Food"},{title: "Comfort Food"},{title: "Comfort Food"}]
+    // }
+  const { name, image, price, reviews, rating, categories } = props.route.params;
 
   const formattedCategories = categories.map((cat) => cat.title).join(" • ");
 
